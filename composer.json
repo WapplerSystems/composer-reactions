@@ -1,0 +1,28 @@
+{
+    "name": "wapplersystems/composer-reactions",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "homepage": "https://wappler.systems",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "require": {
+        "typo3/cms-core": "^13.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "WapplerSystems\\ComposerReactions\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "composer_reactions"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "typo3/cms-composer-installers": true,
+            "typo3/class-alias-loader": true
+        }
+    }
+}

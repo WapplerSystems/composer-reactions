@@ -1,0 +1,2 @@
+# cat=Reaction; type=string; label=Update Composer Packkages: Space-separated list of composer packages to update
+composerPackagesToUpdate =
