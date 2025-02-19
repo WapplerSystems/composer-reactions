@@ -1,0 +1,26 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - release/*
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check config
+        run: |
+          if [[ -z "${{ secrets.WEBHOOK_SECRET }}" ]]; then
+            echo "Missing WEBHOOK_SECRET"
+            exit 1
+          fi
+          if [[ -z "${{ secrets.WEBHOOK_URL }}" ]]; then
+            echo "Missing WEBHOOK_URL"
+            exit 1
+          fi
+
+      - name: POST ${{vars.WEBHOOK_URL}}
+        run: >
+          curl -X POST -H "Content-Type: application/json" -H "x-api-key: ${{ secrets.WEBHOOK_SECRET }}"
+          ${{vars.WEBHOOK_URL}}
