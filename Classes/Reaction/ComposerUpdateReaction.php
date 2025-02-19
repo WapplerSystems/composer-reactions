@@ -47,7 +47,7 @@ class ComposerUpdateReaction implements ReactionInterface
     /** @return string[] */
     private function getComposerPackagesToUpdate(): array {
         $cfgValue = $this->extensionConfiguration->get('github_webhook', 'composerPackagesToUpdate');
-        return array_filter(array_map('trim', explode(',', $cfgValue)));
+        return array_filter(array_map('trim', explode(' ', $cfgValue)));
     }
 
     public function react(
