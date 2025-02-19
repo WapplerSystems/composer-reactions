@@ -1,2 +1,5 @@
-# cat=Reaction; type=string; label=Update Composer Packkages: Space-separated list of composer packages to update
+# cat=Reaction; type=string; label=Update Composer Packages: Space-separated list of composer packages to update
 composerPackagesToUpdate =
+
+# cat=Reaction; type=string; label=Composer Home: Path the the composer home directory, e.g. /home/myuser/.composer
+composerHome =

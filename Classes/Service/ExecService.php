@@ -13,7 +13,7 @@ class ExecService
 {
 
     public function __construct(
-        private readonly LoggerInterface $logger
+        private readonly LoggerInterface $logger,
     )
     {
     }
