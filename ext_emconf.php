@@ -2,8 +2,8 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Composer Reactions',
-    'description' => '',
-    'category' => 'misc',
+    'description' => 'Adds a reaction type for updating composer packages, configurable via extension settings.',
+    'category' => 'services',
     'constraints' => [
         'depends' => [],
         'conflicts' => [],
@@ -13,7 +13,7 @@ $EM_CONF[$_EXTKEY] = [
             'WapplerSystems\\ComposerReactions\\' => 'Classes',
         ],
     ],
-    'state' => 'stable',
+    'state' => 'beta',
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 1,
