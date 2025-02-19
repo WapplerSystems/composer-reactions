@@ -18,13 +18,14 @@ class ExecService
     {
     }
 
-    public function exec(array $cmdarray, ?string $cwd = null, ?string $input = null): void
+    public function exec(array $cmdarray, ?string $cwd = null, ?string $input = null, ?array $env = null): void
     {
         $this->logger->warning("Executing: " . join(" ", $cmdarray));
         $process = new Process(
             $cmdarray,
             cwd: $cwd,
-            input: $input
+            input: $input,
+            env: $env,
         );
         $process->run();
 

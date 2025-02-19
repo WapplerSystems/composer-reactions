@@ -28,6 +28,6 @@ class ComposerService
 
         $typo3Root = $this->environment->getProjectPath();
         $this->logger->info('Updating composer packages: ' . implode(', ', $packages));
-        $this->execService->exec(['composer', 'update', ...$packages], cwd: $typo3Root);
+        $this->execService->exec(['composer', 'update', ...$packages], cwd: $typo3Root, env: $_ENV);
     }
 }
