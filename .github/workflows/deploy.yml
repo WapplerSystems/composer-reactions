@@ -24,4 +24,4 @@ jobs:
       - name: POST ${{vars.WEBHOOK_URL}}
         run: >
           curl -X POST -H "Content-Type: application/json" -H "x-api-key: ${{ secrets.WEBHOOK_SECRET }}"
-          ${{vars.WEBHOOK_URL}}
+          ${{vars.WEBHOOK_URL}} -d '{}'
