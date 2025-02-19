@@ -20,5 +20,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Christian Volkmann',
     'author_email' => 'volkmann@wappler.systems',
     'author_company' => 'WapplerSystems',
-    'version' => '1.0.1',
+    'version' => '1.0.0',
 ];
